@@ -1,0 +1,32 @@
+/* name  mm/dd/yyy  */
+
+header, footer, nav, aside, section, article  {
+       display: block;
+}
+
+/*---------------------------------------------*/
+
+body  {
+    background-color: #f8c473;
+    margin: 1em 2em 1em 2em;
+}
+
+h3    {
+    text-align: center;    
+}
+
+p     {
+    margin-left: 2em; 
+} 
+
+h4#nearTop  {
+    text-align: center;
+}
+
+p#nearEnd     {
+    font-size: .8em;
+}
+
+span#owner   {
+    font-family: "comic sans ms", cursive;
+}

@@ -1,0 +1,81 @@
+/* 
+   Name: -Your name here-
+   Date: -Today's date here-
+*/
+
+/*---------------------------------------------------------
+   All style sheets will begin with the following rule, so
+   that no matter what browser is in use, the new HTML5 
+   structural elements will be treated as block-level 
+   elements (aka "grouping elements"--ref HTML page 26.)
+----------------------------------------------------------- */
+
+header, footer, nav, section, article, aside {
+          display: block;   
+}
+
+/* -------------------------------------------------------  */
+
+
+
+body  {
+    background-color: grey;
+    font-size: 2em;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+ 
+h1 {
+    background-color: black;
+    color: silver;
+    text-align: center;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: right;
+    color: silver;
+}
+
+h3 {
+    border: 2px silver solid;
+    padding: 20px;
+    border-radius: 25px;
+    color: silver;
+    text-shadow: 2px 2px black;
+}
+
+footer {
+    font-size: 0.5em;
+    text-align: right;
+    color: silver;
+}
+
+#firstParagraph {
+    background-color: azure;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    box-shadow: 10px 10px silver;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

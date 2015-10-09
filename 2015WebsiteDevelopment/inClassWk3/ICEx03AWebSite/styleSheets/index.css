@@ -1,0 +1,30 @@
+/* 
+   Author:  firstname lastname
+   Date:    mm/dd/yyyy
+*/
+
+/*
+   All style sheets will begin with the following rule, so
+   that no matter what browser is in use, the new HTML5 
+   structural elements will be treated as block-level elements
+   (aka "grouping elements"--ref HTML page 26.)
+*/
+
+header, footer, nav, section, article, aside {
+        display: block;   
+}
+
+/* -------------------------------------------------------*/
+
+ 
+address   {
+            background-color: grey;
+            color: red;
+
+}
+/*
+#train {
+        height: 200px;
+        width: auto;
+}
+*/

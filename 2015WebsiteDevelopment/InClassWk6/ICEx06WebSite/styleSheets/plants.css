@@ -1,0 +1,37 @@
+/* 
+   Author:  firstname lastname
+   Date:    mm/dd/yyyy
+*/
+
+/*
+   Display HTML5 structural elements (ref: pg 18) as blocks
+   (aka "grouping elements"--ref pg 26.)
+*/
+
+header, footer, nav, section, article, aside {
+        display: block;   
+}
+
+/* -------------------------------------------------------*/
+
+body  {
+         margin: 1.5em 2em 1.5em 2em;      
+}
+
+b     { color: blue;
+}
+
+p     {margin-left: 2em;
+}
+
+.red {
+    color: red;
+}
+
+a:link {
+    color: red;
+}
+
+a:hover {
+    color: darkgoldenrod;
+}

@@ -1,0 +1,40 @@
+/* 
+   Author:  firstname lastname
+   Date:    mm/dd/yyyy
+*/
+
+/*
+   Display HTML5 structural elements (ref: pg 18) as blocks
+   (aka "grouping elements"--ref pg 26.)
+*/
+
+header, footer, nav, section, article, aside {
+        display: block;   
+}
+
+/* -------------------------------------------------------*/
+
+body  {
+        margin: 1.5em 2em 1.5em 2em;   
+}
+
+
+/* Note: the image here is a non-block item, and thus can
+   be centered just as one would center text.  Namely,
+   use 'text-align: center' applied again the block
+   (in this case, an article) that contains the non-block
+   content (in this case an image). */
+
+article#outlineAustralia  {
+        text-align: center;   
+}
+  
+footer  {
+        text-align: center; 
+        font-size: .7em;
+}
+
+h2#topText { 
+        text-align: center;
+        font-size: 2em;
+}
