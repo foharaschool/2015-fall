@@ -1,0 +1,4 @@
+|        Type        |      LoanName      |
+| C                  | Car                |
+| M                  | Mortgage           |
+| O                  | Personal           |

@@ -1,0 +1,4 @@
+InsuranceID	InsuranceName
+AS	AllStates Insurance Co.
+SF	State Farmers Inc.
+NAT	National Insurers Inc. 

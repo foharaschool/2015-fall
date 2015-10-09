@@ -1,0 +1,15 @@
+"ID","Company","ContactName","E-mail","Address1","Address2","City","State","Zip","Phone","Fax","SignupDate","CreditRating","SalesRepID"
+1,"McAfee, Rand, & Karahalis","Barbara Thomas","bthomas16333@yahoo.com","5000 Jefferson Lane","Suite 2000","Flatgap","KY","41219","9596514617","9596516784",10/9/2015 0:00:00,"B",1
+2,"Department of CIS","Kyu Kim","kykim19696@aol.com","1238 Walsh Drive","Suite 2202","Galway","NY","12074","7119765549","7119765441",9/30/2015 0:00:00,"B",2
+3,"Advantage Sales","Rodrigo Cruz","rodcruz25529@hotmail.com","4215 South 81 Street",,"East Greenville","PA","18041","7112805277","7112807055",10/6/2015 0:00:00,"B",1
+4,"Kinzer & Sons","Ashwin Nayar","asnayar14788@gmail.com","9020 N.W. 75 Street","Suite 302","Lawrenceville","GA","30044","3004663100","3004664545",10/5/2015 0:00:00,"A",2
+5,"Milgrom Associates","Ryung Yoo","ryyoo22895@comcast.net","7500 Center Lane",,"Mountain Home","TN","37684","3514654886","3514652111",10/15/2015 0:00:00,"C",2
+6,"Lugo Computer Sales","Kyung Kim","kykim22115@mail.com","6000 Tigertail Avenue",,"Sellersburg","IN","47172","3516509220","3516501592",10/21/2015 0:00:00,"C",1
+7,"Bethune Appliance Sales","Feng Wang","fewang28899@ymail.com","276 Brickell Avenue","Suite 1403","Tunnel Hill","IL","62991","6006487814","6006484080",10/14/2015 0:00:00,"A",1
+8,"Baker Auto Supply","Cantara Abaid","canabaid24247@comcast.net","4508 N.W. 7 Street",,"Jarrettsville","MD","21084","8229152353","8229153663",10/7/2015 0:00:00,"A",2
+9,"Howard Animal Hospital","Takeshi Sasaki","taksasaki16621@live.com","455 Bargello Avenue",,"Mc Lemoresville","TN","38235","8309256066","8309252417",10/7/2015 0:00:00,"A",2
+10,"Katie's Casual Wear","Loelia Hassan","lohassan16806@hotmail.com","9522 S.W. 142 Street",,"Glenwood","NJ","07418","9585124318","9585122760",10/16/2015 0:00:00,"B",1
+11,"Cruz, Nicks, and Hixon LLC","Jenny Wilson","jewilson23711@gmail.com","7245 NW 8 Street",,"Steamboat Springs","CO","80488","8306225934","8306227656",10/12/2015 0:00:00,"B",2
+12,"Kline Bait & Tackle","Rahul Patil","rapatil29870@gmail.com","1000 Call Street",,"Birmingham","AL","35238","4246639040","4246637588",10/6/2015 0:00:00,"A",2
+13,"Computer Informations Systems","Lila Azizi","lilazizi12103@aol.com","1238 Walsh Drove","Suite 2202","Estcourt Station","ME","04741","9692315174","9692316389",10/14/2015 0:00:00,"B",2
+14,"Coulter Office Supplies","Ernest Guzman","eguzman@coulter.com","1000 Main Street",,"Buckingham","PA","18912","6009946029","6009943574",10/21/2015 0:00:00,"A",2
