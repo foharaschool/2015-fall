@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Comment</title>
+    <link rel="stylesheet" href="../styleSheets/main.css">
+    <link rel="stylesheet" href="../styleSheets/customerComment.css">
+</head>
+
+<body>
+    <h1>This page is currently under construction</h1>
+    <div id="formContainer">
+        <form name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
+
+            <label>Name:</label>
+            <input type="text" name="customerName" maxlength="30" />
+
+            <br />
+            <br />
+            <label>Comment:</label>
+            <textarea name="comment"></textarea>
+
+            <br />
+            <br />
+            <div id="buttonContainer">
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Clear" />
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <hr />
+        <a href="index.html"><img id="home" src="../images/home.png" /></a>
+        <p id="footerRight">Revised 10/2015 Fred O'Hara</p>
+        <script>
+            // Define two variables for the program to use
+            var renderedDate;
+            var revisedDate;
+        
+            // Assign date and time content to the variables       
+            renderedDate = new Date();             // assign current date
+            revisedDate  = new Date(document.lastModified);  // assign revised date
+        
+            // Deliver the variables content to the Web page 
+            document.write("<div>");
+            document.write("This Web page rendered: " + renderedDate.toLocaleString());
+            document.write("<br />");
+            document.write("Revised: " + revisedDate.toLocaleString());
+            document.write("</div>");
+
+        </script>
+    </footer>
+</body>
+
+</html>

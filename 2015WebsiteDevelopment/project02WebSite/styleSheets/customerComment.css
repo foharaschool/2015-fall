@@ -1,0 +1,53 @@
+h1 {
+	font-size: 5em;
+}
+
+#home {
+    width: 50px;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+#formContainer {
+	width: 350px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: silver;
+}
+
+label {
+	width: 100px;
+	display: inline-block;
+	text-transform: uppercase;
+	vertical-align: top;
+	color: #909090;
+}
+
+[type='text'], textarea {
+	width: 239px;
+}
+
+textarea {
+	height: 100px;
+}
+
+#buttonContainer {
+	text-align: right;
+}
+
+[type='reset'] {
+	background-color: transparent;
+	border-width: 0;
+	color: blue;
+	text-decoration: underline;
+	opacity: .5;
+	cursor: pointer;
+}
+
+footer div {
+	text-align: right;
+}
+
+

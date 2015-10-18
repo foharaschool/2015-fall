@@ -50,9 +50,9 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
 
 
@@ -89,15 +89,18 @@
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+num1
+num2
 
 
 The List of Output Variables:
-
+num1
+num2
 
 
 The Process Checklist:
-
+Prompt user for two numbers
+Compare and output
 
 
 </pre>
@@ -148,8 +151,16 @@ The number 4 is smaller than 5.
 
 // PART 1: YOUR CODE STARTS AFTER THIS LINE:
 
-
-  
+    // Prompt user for two numbers
+    var num1 = Number(prompt("Give me a number"));
+    var num2 = Number(prompt("Give me another number"));
+    
+    // Compare and output
+    if(num1 > num2) {
+        document.write("The number " + num1 + " is bigger than " + num2 +".");
+    } else {
+        document.write("The number " + num1 + " is smaller than " + num2 +".");
+    }
 
  
  
@@ -217,15 +228,16 @@ Please try again
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+userString
 
 
 The List of Output Variables:
-
+userString
 
 
 The Process Checklist:
-
+Initialize variables and prompt
+Check for equivlenece in if statement
 
 
 </pre>
@@ -244,8 +256,15 @@ The Process Checklist:
 
 // PART 2: YOUR CODE STARTS AFTER THIS LINE:
 
-
-  
+    // Initialize variables and prompt
+    var userString = prompt("Enter a string");
+    
+    // Check for equivlenece in if statement
+  if(userString === "Hello") {
+      document.write("Hello is the right word.")
+  } else {
+      document.write("Please try again.")
+  }
 
  
  

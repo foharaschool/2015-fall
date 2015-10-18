@@ -1,0 +1,29 @@
+body {
+	background-color: #ACD5FF;
+}
+
+.centerText {
+	text-align: center;
+}
+
+.centerShadowText {
+	text-align: center;
+	text-shadow: gray 2px 2px;
+}
+
+.shadowText {
+	text-shadow: gray 2px 2px;
+	
+}
+
+.shadowBox {
+	box-shadow: gray 5px 5px;
+}
+
+footer {
+    margin-top: 25px;
+    clear: both;
+}
+
+#footerRight {
+    text-align: right;

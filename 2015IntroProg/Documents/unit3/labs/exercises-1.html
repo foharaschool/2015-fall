@@ -186,13 +186,18 @@ The number 1980
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+snglWord
 
 The List of Output Variables:
-
+snglWord
 
 The Process Checklist:
-
+Prompt for single word
+Output prompted string
+Output if length greater than 10
+Output if word is less than Algebra or not
+Output if word is less than Singularity or not
+Output if word is uppercase or lowercase
 
 </pre>
 
@@ -205,15 +210,15 @@ The Process Checklist:
 <pre class="blackGreen">
 TEST PLAN:
 
-Test Case 1:
-    Inputs:
+Test Case 1: 
+    Inputs: pants
     
-    Expected Results:
+    Expected Results: no length greater than 10, greater than Algebra, Greater than Sing..., lowercase
 
 Test Case 2:
-    Inputs:
+    Inputs: Antidisestablishmentarianism
     
-    Expected Results:
+    Expected Results: >10, >Algebra, &lt;singularity, uppercase
 
 
 </pre>
@@ -254,8 +259,38 @@ The word, &quot;existentialism&quot;
 
 // PART 2: YOUR CODE STARTS AFTER THIS LINE:
 
-
-  
+    // Initialize variables and Prompt for single word
+    var snglWord = prompt("Give me a single word");
+    var lowercase;
+    // Output prompted string
+    document.write('The word, "' + snglWord + '"<br />');
+    
+    // Output if length greater than 10
+    if(snglWord.length > 10) {
+        document.write("- has a length that is greater than 10.<br />")
+    }
+    
+    // Output if word is less than Algebra or not
+    if(snglWord < "Algebra") {
+        document.write('- is less than, "Algebra"<br />')
+    } else {
+        document.write('- is not less than, "Algebra"<br />')
+    }
+    
+    // Output if word is less than Singularity or not
+    if(snglWord < "Singularity") {
+        document.write('- is less than, "Singularity"<br />')
+    } else {
+        document.write('- is not less than, "Singularity"<br />')
+    }    
+    
+    // Output if word is uppercase or lowercase
+    lowercase = snglWord.charAt(0).toLowerCase();
+    if(snglWord.charAt(0) === lowercase) {
+        document.write('- starts with a lowercase letter<br />')
+    } else {
+        document.write('- starts with an uppercase letter.<br />')
+    }
 
 
 

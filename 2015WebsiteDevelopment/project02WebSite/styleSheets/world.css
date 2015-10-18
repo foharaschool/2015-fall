@@ -1,0 +1,17 @@
+h1 {
+	font-size: 3em;
+}
+
+#home {
+    width: 50px;
+}
+
+.mapImage {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#footerRight {
+    text-align: right;
+}
+

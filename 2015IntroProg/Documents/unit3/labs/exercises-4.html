@@ -50,11 +50,10 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
-
 
 
 
@@ -98,13 +97,14 @@
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+userCounty
 
 The List of Output Variables:
 
 
 The Process Checklist:
-
+Initialize variable and prompt for county
+Output evaluation of if statement
 
 </pre>
 
@@ -119,19 +119,19 @@ The Process Checklist:
 TEST PLAN:
 
 Test Case 1:
-    Inputs:
+    Inputs: Dane
     
-    Expected Results:
+    Expected Results: plz donate
 
 Test Case 2:
-    Inputs:
+    Inputs: Sauk
     
-    Expected Results:
+    Expected Results: plz donate
 
-Test Case 3:
-    Inputs:
+Test Case 3: 
+    Inputs: Fillmore
     
-    Expected Results:
+    Expected Results: welcome
 
 
 </pre>
@@ -181,8 +181,15 @@ Hello, welcome to the county.
 
 // PART 1: YOUR CODE STARTS AFTER THIS LINE:
 
-
-  
+    // Initialize variable and prompt for county
+    var userCounty = prompt("What county are you from?");
+        
+    // Output evaluation of if statement
+  if(userCounty === "Dane" || userCounty === "Sauk") {
+      document.write("Hello, please donate to the park cleanup fund.");
+  } else {
+      document.write("Hello, welcome to the county.");
+  }
 
  
  
@@ -227,12 +234,16 @@ Hello, welcome to the county.
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+userNum
+userLetter
 
 The List of Output Variables:
-
+userNum
+userLetter
 
 The Process Checklist:
+Initialize variables and prompt for number and letter
+Run inputs against condition and execute conditional output
 
 
 </pre>
@@ -248,29 +259,29 @@ The Process Checklist:
 TEST PLAN:
 
 Test Case 1:
-    Inputs:
+    Inputs: 6, R
     
-    Expected Results:
+    Expected Results: not correct
 
 Test Case 2:
-    Inputs:
+    Inputs: 5, B
     
-    Expected Results:
+    Expected Results: not correct
 
 Test Case 3:
-    Inputs:
+    Inputs: 4, B
     
-    Expected Results:
+    Expected Results: correct
 
 Test Case 4:
-    Inputs:
+    Inputs: -1, A
     
-    Expected Results:
+    Expected Results: correct
 
 Test Case 5:
-    Inputs:
+    Inputs: 3, T
     
-    Expected Results:
+    Expected Results: not correct
 
 
 </pre>
@@ -334,8 +345,16 @@ Test Case 5:
 
 // PART 2: YOUR CODE STARTS AFTER THIS LINE:
 
-
-
+    // Initialize variables and prompt for number and letter
+    var userNum = Number(prompt("Give me a number"));
+    var userLetter = prompt("give me a letter");
+    
+    // Run inputs against condition and execute conditional output
+    if(userNum < 5 && (userLetter === "A" || userLetter === "B")) {
+        document.write(userNum + " and " + userLetter + " are correct.");
+    } else {
+        document.write(userNum + " and/or " + userLetter + " are not correct, please try again.");
+    }
  
  
  

@@ -1,0 +1,61 @@
+body {
+	background-color: #ACD5FF;
+    margin: 8px 15px;
+
+}
+
+nav, .center {
+	text-align: center;
+}
+
+.centerText {
+	text-align: center;
+	display: block;
+}
+
+.centerShadowText {
+	text-align: center;
+	text-shadow: gray 2px 2px;
+}
+
+.shadowText {
+	text-shadow: gray 2px 2px;
+	
+}
+
+.shadowBox {
+	box-shadow: gray 5px 5px;
+}
+
+#tapestry {
+	width: 384px;
+	float: left;
+	margin: 25px 20px 20px 0;
+}
+
+aside {
+	width: 17em;
+	float: right;
+	margin: 25px 0 25px 20px;
+	border-radius: 20px;
+	background-color: #5599ff;
+	padding: 1em;
+	box-shadow: gray 5px 5px;
+}
+
+footer {
+    margin-top: 25px;
+    clear: both;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+hr {
+    margin: 0;
+}
+
+h2 {
+   margin-top: 45px; 
+}

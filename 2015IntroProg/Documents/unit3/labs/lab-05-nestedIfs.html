@@ -50,9 +50,9 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
 
 
@@ -93,13 +93,17 @@
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+userName
+letterCode
 
 The List of Output Variables:
-
+userName
+letterCode
 
 The Process Checklist:
-
+Initialize variables and prompt for number and letter
+Test if valid input is given / Output error if necessary
+Output conditional message
 
 </pre>
 
@@ -114,19 +118,19 @@ The Process Checklist:
 TEST PLAN:
 
 Test Case 1:
-    Inputs:
+    Inputs: Fred, A
     
-    Expected Results:
+    Expected Results: hello Fred
 
 Test Case 2:
-    Inputs:
+    Inputs: "", B
     
-    Expected Results:
+    Expected Results: error
 
 Test Case 3:
-    Inputs:
+    Inputs: Mom, E
     
-    Expected Results:
+    Expected Results: error
 
 
 </pre>
@@ -155,7 +159,41 @@ Hello, Fred, how are you?
 
 // PART 1 CODE STARTS AFTER THIS LINE:
 
-
+    // Initialize variables and prompt for number and letter
+    var userName;
+    var letterCode;
+    var validEntry = false;
+    
+    // Test if valid input is given / Output error if necessary
+    while(!validEntry) {
+        userName = prompt("Enter your name");
+        letterCode = prompt("Enter a letter A-D").toUpperCase();
+        
+        if(userName.length > 0 && (letterCode >= "A" && letterCode <= "D" )) {
+            validEntry = true;
+        } else {
+            alert("Invalid input, please try again");
+        }
+    }
+    
+    // Output conditional message
+    switch(letterCode) {
+        case "A":
+            document.write("Hello, "+ userName + ", how are you?");
+            break;
+        case "B":
+            document.write("Top of the morning to you, "+ userName + "!");
+            break;
+        case "C":
+            document.write("Hi, "+ userName + ".");
+            break;
+        case "D":
+            document.write(userName + " is here! Welcome!");
+            break;
+        default:
+            document.write("My code is broken!");
+            break;
+    }
   
 
  
@@ -376,26 +414,98 @@ You are having chocolate ice cream with walnuts. Enjoy!
 
 // PART 2 CODE STARTS AFTER THIS LINE:
 
-// Define all constants
+    // Define all constants
+    
+    var CHOICES_MESSAGE_01 = "You are having vanilla ice cream with M&Ms. Enjoy!";
+    var CHOICES_MESSAGE_02 = "You are having vanilla ice cream with Reese's Pieces. Enjoy!"; 
+    var CHOICES_MESSAGE_03 = "You are having chocolate ice cream with brownies. Enjoy!"; 
+    var CHOICES_MESSAGE_04 = "You are having chocolate ice cream with walnuts. Enjoy!"; 
+    var CHOICES_MESSAGE_05 = "You are having strawberry ice cream with pecans. Enjoy!"; 
+    var CHOICES_MESSAGE_06 = "You are having strawberry ice cream with almonds. Enjoy!"; 
+    const VANILLA_TOPPING_MESSAGE = "Would you like M&M's (M), or Reese's Pieces (R) as your topping?";
+    const CHOCOLATE_TOPPING_MESSAGE = "Would you like brownies (b), or walnuts (W) as your topping?";
+    const STRAWBERRY_TOPPING_MESSAGE = "Would you like pecans (P), or almonds (A) as your topping?";
+    // Define all variables
+    
+    var userIceCreamChoice;       // this variable will receive the code keyed by the user
+    var userToppingChoice;        // this variable will receive the code keyed by the user
+    var userToppingLetters = [];  // this variable will store the topping letters
+    var validEntry = false;       // this variable will set my input validation loop
+    var toppingMessage;           // this variable will hold the topping message for prompting
+    var fullChoice;               // this variable will hold the concatenated choices
 
-var CHOICES_MESSAGE_01 = "You are having vanilla ice cream with M&Ms. Enjoy!";
-var CHOICES_MESSAGE_02 = "You are having vanilla ice cream with Reese's Pieces. Enjoy!"; 
-var CHOICES_MESSAGE_03 = "You are having chocolate ice cream with brownies. Enjoy!"; 
-var CHOICES_MESSAGE_04 = "You are having chocolate ice cream with walnuts. Enjoy!"; 
-var CHOICES_MESSAGE_05 = "You are having strawberry ice cream with pecans. Enjoy!"; 
-var CHOICES_MESSAGE_06 = "You are having strawberry ice cream with almonds. Enjoy!"; 
 
-// Define all variables
-
-var userIceCreamChoice;       // this variable will receive the code keyed by the user
-var userToppingChoice;        // this variable will receive the code keyed by the user
-var choiceMessageForThisUser; // this variable will be assigned one of the six messaages
-
-// Ask user for ice cream and topping choices
-
-// Select choice message based on received choice codes
-
-// Display the choice message on the web page
+    
+    // Test if valid input is given / Output error if necessary - Ice Cream Choice
+    while(!validEntry) {
+        userIceCreamChoice = prompt("Would you like vanilla (V), chocolate (C), or strawberry (S) ice cream?").toUpperCase();   
+        switch(userIceCreamChoice) {
+            case "V":
+                toppingMessage = VANILLA_TOPPING_MESSAGE;
+                validEntry = true;
+                break;
+            case "C":
+                toppingMessage = CHOCOLATE_TOPPING_MESSAGE;
+                validEntry = true;
+                break;
+            case "S":
+                toppingMessage = STRAWBERRY_TOPPING_MESSAGE;
+                validEntry = true;
+                break;
+            default:
+                alert("Invalid ice cream choice, please try again");
+                break;
+        }
+    }
+    
+    
+    
+    // Topping Letter Validation Build
+    if(userIceCreamChoice === "V") {
+        userToppingLetters = ["M", "R"];
+    } else if(userIceCreamChoice === "C") {
+        userToppingLetters = ["B", "W"];
+    } else if(userIceCreamChoice === "S") {
+        userToppingLetters = ["P", "A"];
+    }
+    
+    // Test if valid input is given / Output error if necessary - Topping Choice
+    validEntry = false;
+    while(!validEntry) {
+        userToppingChoice = prompt(toppingMessage).toUpperCase();   
+        if(userToppingChoice === userToppingLetters[0] || userToppingChoice === userToppingLetters[1]) {
+            validEntry = true;
+        } else {
+            alert("Invalid topping choice, please try again");
+        }
+    }
+    
+    // Concatenate Icecream/Topping Choices
+    fullChoice = userIceCreamChoice + userToppingChoice;
+    
+    // Output Appropriate Message
+    switch(fullChoice) {
+        case "VM":
+            document.write(CHOICES_MESSAGE_01);
+            break;
+        case "VR":
+            document.write(CHOICES_MESSAGE_02);
+            break;
+        case "CB":
+            document.write(CHOICES_MESSAGE_03);
+            break;
+        case "CW":
+            document.write(CHOICES_MESSAGE_04);
+            break;
+        case "SP":
+            document.write(CHOICES_MESSAGE_05);
+            break;
+        case "SA":
+            document.write(CHOICES_MESSAGE_06);
+            break;
+        default:
+            document.write("My code is Broken!");
+    }
 
 
 
