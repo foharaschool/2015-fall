@@ -1,0 +1,14 @@
+
+
+.mapImage {
+	width: 900px;
+	margin: 0 auto;
+    box-shadow: 5px 5px 2px #555555;
+    border-radius: 5px;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+

@@ -2,6 +2,10 @@ body {
 	background-color: #ACD5FF;
 }
 
+h1 {
+	font-size: 3em;
+}
+
 .centerText {
 	text-align: center;
 }
@@ -27,3 +31,13 @@ footer {
 
 #footerRight {
     text-align: right;
+}
+
+.navButtons {
+    width: 50px;
+    margin: 5px 10px;
+}
+.buttonDiv {
+    width: 150px;
+    margin: 0 auto;
+}

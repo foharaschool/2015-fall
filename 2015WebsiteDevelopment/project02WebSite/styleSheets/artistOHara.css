@@ -1,0 +1,30 @@
+img {
+float: right;
+width: 400px;
+margin-left: 15px;
+margin-right: 200px;
+margin-top: 25px;
+margin-bottom: 0;
+}
+
+.bio {
+    margin-left: 150px;
+}
+
+.contact {
+    clear: both;
+    float: right;
+    width: 380px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    padding: 10px;
+    margin-right: 200px;
+}
+
+.contact ::after {
+    clear: both;
+}
+
+footer {
+    margin-top: 25px;
+}
