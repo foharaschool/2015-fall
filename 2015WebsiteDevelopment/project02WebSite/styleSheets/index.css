@@ -59,3 +59,21 @@ hr {
 h2 {
    margin-top: 45px; 
 }
+
+nav a {
+    font-size: 1.3em;
+}
+
+nav a:link {
+    color: red;
+}
+
+nav a:hover {
+    color: darkgoldenrod;
+    font-size: 1.4em;
+    text-shadow: black 2px 2px 2px;
+}
+
+nav a:visited {
+    color: black;
+}
