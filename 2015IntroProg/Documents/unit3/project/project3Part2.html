@@ -52,9 +52,9 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
 
 
@@ -92,13 +92,22 @@
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+userName
+userScore
+userGrade
+article
 
 The List of Output Variables:
-
+userName
+userScore
+userGrade
+article
 
 The Process Checklist:
-
+Initialize variables
+Prompt for name and score
+Calculate letter grade and apply appropriate article
+Output results
 
 </pre>
 
@@ -121,29 +130,29 @@ The Process Checklist:
 TEST PLAN:
 
 Test Case 1:
-    Inputs:
+    Inputs: Fred, 79.9
     
-    Expected Results:
+    Expected Results: name, score, c
 
 Test Case 2:
-    Inputs:
+    Inputs:Bob, 85
     
-    Expected Results:
+    Expected Results: name, score, b
 
 Test Case 3:
-    Inputs:
+    Inputs: Trish, 55.53535
     
-    Expected Results:
+    Expected Results: name, score, f
 
 Test Case 4:
-    Inputs:
+    Inputs: Sven, 80
     
-    Expected Results:
+    Expected Results: name, score, b
 
 Test Case 5:
-    Inputs:
+    Inputs: Leena, 99
     
-    Expected Results:
+    Expected Results: name, score, a
 
 </pre>
 
@@ -174,7 +183,33 @@ Fred Smith's score of 87 is a B
 
 // YOUR CODE STARTS AFTER THIS LINE:
 
+    // Initialize variables
+    var userName;
+    var userScore;
+    var userGrade;
+    var article = "a ";
     
+    // Prompt for name and score
+    userName = prompt("Please enter the student's name");
+    userScore = Number(prompt("Please enter the student's score (0-100+):"));
+    
+    // Calculate letter grade and apply appropriate article
+    if(userScore >= 90) {
+        userGrade = "A";
+        article = "an ";
+    } else if(userScore >=80) {
+        userGrade = "B";
+    } else if(userScore >=70) {
+        userGrade = "C";
+    } else if(userScore >=60) {
+        userGrade = "D";
+    } else {
+        userGrade = "F";
+        article = "an ";
+    }
+    
+    // Output results
+    document.write (userName + "'s score of " + userScore + " is " + article + userGrade);
 
  
 // END OF YOUR CODE

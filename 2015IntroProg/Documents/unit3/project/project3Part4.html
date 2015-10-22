@@ -52,9 +52,9 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
 
 
@@ -104,13 +104,17 @@
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+buildingCost
 
 The List of Output Variables:
-
+buildingcost
+archFee
 
 The Process Checklist:
-
+Initialize variables
+Prompt for building cost
+Calculate fee
+Output cost and fee
 
 </pre>
 
@@ -131,34 +135,34 @@ The Process Checklist:
 TEST PLAN:
 
 Test Case 1:
-    Inputs:
+    Inputs: 100
     
-    Expected Results:
+    Expected Results: 8
 
 Test Case 2:
-    Inputs:
+    Inputs: 5000
     
-    Expected Results:
+    Expected Results: 400
 
 Test Case 3:
-    Inputs:
+    Inputs: 10000
     
-    Expected Results:
+    Expected Results: 550
 
 Test Case 4:
-    Inputs:
+    Inputs: 80000
     
-    Expected Results:
+    Expected Results: 2650
 
 Test Case 5:
-    Inputs:
+    Inputs: 81000
     
-    Expected Results:
+    Expected Results: 2680
     
 Test Case 6:
-    Inputs:
+    Inputs: 85000
     
-    Expected Results:</pre>
+    Expected Results: 2800</pre>
 
 
 
@@ -187,8 +191,29 @@ For a building that costs $100000 the architect's fee will be $2775.
 
 // YOUR CODE STARTS AFTER THIS LINE:
 
+    // Initialize variables and constants
+    var buildingCost;
+    var archFee;
+    const FEE_EIGHT = 0.08;
+    const FEE_THREE = 0.03;
+    const FEE_TWO_HALF = 0.025;
+    const FEE_BASE = 5000;
+    const BASE_TOTAL = FEE_BASE * FEE_EIGHT;
     
-
+    // Prompt for building cost
+    buildingCost = Number(prompt("Enter the cost of the building"));
+    
+    // Calculate fee
+    if(buildingCost <= 5000) {
+        archFee = BASE_TOTAL;
+    } else if((buildingCost -5000) <= 80000) {
+        archFee = BASE_TOTAL + (buildingCost - FEE_BASE) * FEE_THREE;
+    } else if((buildingCost -5000) > 80000) {
+        archFee = BASE_TOTAL + (buildingCost - FEE_BASE) * FEE_TWO_HALF;
+    }
+    
+    // Output cost and fee
+    document.write("For a building that costs $" + buildingCost + " the architect's fee will be $" + archFee.toFixed(2) + ".");
  
 // END OF YOUR CODE
 

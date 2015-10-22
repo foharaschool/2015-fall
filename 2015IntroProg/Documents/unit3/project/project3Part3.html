@@ -52,9 +52,9 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
 
 
@@ -110,13 +110,18 @@
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+numPeople
+discountAAA
+roomView
 
 The List of Output Variables:
-
+totalCost
 
 The Process Checklist:
-
+Initialize variables
+Prompt for Information
+Calculate Total
+Output Total
 
 </pre>
 
@@ -141,25 +146,25 @@ Test Case 1:
     
     Expected Results:  Total cost per night is $46.75
 
-Test Case 2:
-    Inputs:
+Test Case 2: 
+    Inputs: 7 n n
     
-    Expected Results:
+    Expected Results: No more than 6.
 
 Test Case 3:
-    Inputs:
+    Inputs: 4 y n
     
-    Expected Results:
+    Expected Results: $66
 
 Test Case 4:
-    Inputs:
+    Inputs: 5 y y
     
-    Expected Results:
+    Expected Results: $73.15
 
 Test Case 5:
-    Inputs:
+    Inputs: 2 n n
     
-    Expected Results:
+    Expected Results: $50
 
 </pre>
 
@@ -191,7 +196,47 @@ Total cost per night is $50.00
 
 // YOUR CODE STARTS AFTER THIS LINE:
 
+    // Initialize variables
+    var numPeople;
+    var discountAAA;
+    var roomView;
+    var totalCost;
     
+    // Prompt for Information
+    numPeople = Number(prompt("Enter the number of people Staying(1-6)"));
+    discountAAA = prompt("Are you a AAA member?(Y or N)").toUpperCase();
+    roomView = prompt("Would you like a room with a view?(Y or N)").toUpperCase();
+    
+    // Calculate Total
+    if(numPeople > 6) {
+        document.write("No more than 6 allowed in a room.  Please press F5 and try again.");
+    } else if(numPeople === 5 || numPeople === 6) {
+        totalCost = 70;
+        if(roomView === "Y") {
+            totalCost = totalCost + 0.1 * totalCost;
+        }
+        if(discountAAA ==="Y") {
+            totalCost = totalCost * 0.95;
+        }
+    } else if(numPeople === 3 || numPeople === 4) {
+        totalCost = 60;
+        if(roomView === "Y") {
+            totalCost = totalCost + 0.1 * totalCost;
+        }
+        if(discountAAA ==="Y") {
+            totalCost = totalCost * 0.9;
+        }
+    } else if(numPeople === 1 || numPeople === 2) {
+        totalCost = 50;
+        if(roomView === "Y") {
+            totalCost = totalCost + 0.1 * totalCost;
+        }
+        if(discountAAA ==="Y") {
+            totalCost = totalCost * 0.85;
+        }
+    }
+    // Output Total
+    document.write("Total cost per night is $" + totalCost.toFixed(2) );
 
  
 // END OF YOUR CODE

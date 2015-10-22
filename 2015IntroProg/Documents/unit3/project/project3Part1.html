@@ -52,9 +52,9 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
 
 
@@ -101,25 +101,26 @@ INVALID! Can't follow directions, eh?
 
 // YOUR CODE STARTS AFTER THIS LINE:
 
-    var userchoice
+    // initialize variables
+    var userChoice;
     
-    / Obtain an uppercase letter choice from the user
-	// Note: Any choice other than an uppercase W, X, Y, or Z must
-	//       fall into the invalid choice "else net" at the end of
-	//       the iinearly nested IF.
-    prompt("Enter your one choice from: W, X, Y, or Z.");
+    /* Obtain an uppercase letter choice from the user
+	Note: Any choice other than an uppercase W, X, Y, or Z must
+	fall into the invalid choice "else net" at the end of
+	the iinearly nested IF. */
+    userChoice = prompt("Enter your one choice from: W, X, Y, or Z.").toUpperCase();
  
     // Display user choice message on the Web page
  
-    if (userchoice = 'W' || userchoice = 'X' ) {
-         document . write("Either W or X are excellent choices.")
+    if(userChoice === 'W' || userChoice === 'X' ) {
+         document.write("Either W or X are excellent choices.");
     
-    else if (userchoice === 'Y') {
-         document . write("The Y choice is pretty good too.");
-    } else if (userchoice === 'Z') {
-         document . write("Z is an OK but not very good choice.");
+    } else if(userChoice === 'Y') {
+         document.write("The Y choice is pretty good too.");
+    } else if(userChoice === 'Z') {
+         document.write("Z is an OK but not very good choice.");
     } else {
-         documentwrite("INVALID! Can't follow directions, eh?");
+         document.write("Invalid Input! Please hit F5 to try again.");
     }
     
  

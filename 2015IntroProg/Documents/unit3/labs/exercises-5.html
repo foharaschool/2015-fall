@@ -50,9 +50,9 @@
 
 
 <ul>
-<li>Name:</li>
-<li>Section:</li>
-<li>Email:</li>
+<li>Name: Fred O'Hara</li>
+<li>Section: Wednesday 5:30</li>
+<li>Email: fohara@madisoncollege.edu</li>
 </ul>
 
 
@@ -94,13 +94,16 @@
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+numKids
+numRooms
 
 The List of Output Variables:
-
+numKids
+numRooms
 
 The Process Checklist:
-
+Initialize variables and prompt for input
+calculate and output message
 
 </pre>
 
@@ -115,29 +118,29 @@ The Process Checklist:
 TEST PLAN:
 
 Test Case 1:
-    Inputs:
+    Inputs: 1, 1
     
-    Expected Results:
+    Expected Results: lucky
 
 Test Case 2:
-    Inputs:
+    Inputs: 2, 2
     
-    Expected Results:
+    Expected Results: lucky
 
 Test Case 3:
-    Inputs:
+    Inputs: 3, 2
     
-    Expected Results:
+    Expected Results: cozy
 
 Test Case 4:
-    Inputs:
+    Inputs: 3, 1
     
-    Expected Results:
+    Expected Results: crowded
 
 Test Case 5:
-    Inputs:
+    Inputs: 1, 3
     
-    Expected Results:
+    Expected Results: spacious
 
 
 </pre>
@@ -200,9 +203,34 @@ With 2 kids and 2 bedrooms you must feel lucky!
 
 // PART 1: YOUR CODE STARTS AFTER THIS LINE:
 
-
-  
-
+    // Initialize variables and prompt for input
+    var numKids = Number(prompt("How many kids were in your family?"));
+    var numRooms = Number(prompt("How many bedrooms did you have?"));
+    var message;
+    var bedText = "bedroom";
+    var kidText = "kid" 
+    
+    // calculate necessary message
+    if(numKids === numRooms) {
+        message = "feel lucky!";
+    } else if ((numKids + 1) === numRooms) {
+        message = "be spacious!";
+    } else if ((numKids + 2) === numRooms) {
+        message = "have an empty feeling!";
+    } else if ((numKids - 1) === numRooms) {
+        message = "must be cozy!";
+    } else if ((numKids - 2) === numRooms) {
+        message = "must be crowded!";
+    }
+    if(numKids > 1) {
+        kidText += "s";
+    }
+    if(numRooms > 1) {
+        bedText += "s";
+    }
+    
+    // Output message
+    document.write("With " + numKids + " " + kidText + " and " + numRooms + " " + bedText + " you must " + message);
  
  
  
@@ -248,13 +276,16 @@ With 2 kids and 2 bedrooms you must feel lucky!
 
 <pre class="blackGreen">
 The List of Input Variables:
-
+packageWeight
 
 The List of Output Variables:
-
+packageWeight
+shippingCost
 
 The Process Checklist:
-
+Initialize variables and prompt for package weight
+calculate cost
+output weight and cost message
 
 </pre>
 
@@ -268,29 +299,29 @@ The Process Checklist:
 TEST PLAN:
 
 Test Case 1:
-    Inputs:
+    Inputs: 15.5
     
-    Expected Results:
+    Expected Results: 7.50
 
 Test Case 2:
-    Inputs:
+    Inputs: 5
     
-    Expected Results:
+    Expected Results: 3.50
 
 Test Case 3:
-    Inputs:
+    Inputs: 8
     
-    Expected Results:
+    Expected Results: 5
 
 Test Case 4:
-    Inputs:
+    Inputs: 12
     
-    Expected Results:
+    Expected Results: 7.50
 
 Test Case 5:
-    Inputs:
+    Inputs: 400
     
-    Expected Results:
+    Expected Results: 10
 
 
 </pre>
@@ -327,8 +358,25 @@ Your package that weighs 3.5 lbs. will cost $3.50 to ship.
 
 // PART 2: YOUR CODE STARTS AFTER THIS LINE:
 
-
- 
+    // Initialize variables and prompt for package weight
+    var packageWeight = Number(prompt("Enter package weight"));
+    var shippingCost;
+    
+    // calculate cost
+    if(packageWeight <= 2) {
+        shippingCost = 2.25;
+    } else if(packageWeight <= 5) {
+        shippingCost = 3.50;
+    } else if(packageWeight <= 10) {
+        shippingCost = 5;
+    } else if(packageWeight <= 20) {
+        shippingCost = 7.50;
+    } else if(packageWeight > 20) {
+        shippingCost = 10;
+    }
+    
+    // output weight and cost message
+ document.write("Your package that weighs " + packageWeight + " lbs. will cost $" + shippingCost.toFixed(2) + " to ship.")
  
  
 
