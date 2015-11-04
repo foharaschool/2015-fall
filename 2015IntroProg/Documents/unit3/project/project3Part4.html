@@ -205,7 +205,7 @@ For a building that costs $100000 the architect's fee will be $2775.
     
     // Calculate fee
     if(buildingCost <= 5000) {
-        archFee = BASE_TOTAL;
+        archFee = buildingCost * FEE_EIGHT;
     } else if((buildingCost -5000) <= 80000) {
         archFee = BASE_TOTAL + (buildingCost - FEE_BASE) * FEE_THREE;
     } else if((buildingCost -5000) > 80000) {

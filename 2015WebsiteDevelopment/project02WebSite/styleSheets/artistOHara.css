@@ -19,6 +19,8 @@ margin-bottom: 0;
     background-color: blanchedalmond;
     padding: 10px;
     margin-right: 200px;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 .contact ::after {
@@ -27,4 +29,9 @@ margin-bottom: 0;
 
 footer {
     margin-top: 25px;
+}
+
+.artistImage {
+    padding-left: 10px;
+    margin-bottom: 15px;
 }

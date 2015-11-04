@@ -1,5 +1,5 @@
 h1 {
-	font-size: 5em;
+	font-size: 2em;
 }
 
 #home {
@@ -15,6 +15,7 @@ h1 {
 	margin: 0 auto;
 	padding: 20px;
 	background-color: silver;
+    border-radius: 8px;
 }
 
 label {
@@ -48,6 +49,12 @@ textarea {
 
 footer div {
 	text-align: right;
+}
+
+.buttonDiv {
+    float: left;
+    text-align: left;
+    margin-left: 20px;
 }
 
 
