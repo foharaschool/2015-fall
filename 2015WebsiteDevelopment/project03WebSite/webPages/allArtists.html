@@ -1,16 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="../styleSheets/allArtists.css">
+    <meta charset="UTF-8">
+    <title>A list of All our Artists</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../styleSheets/main.css">
+    <link rel="stylesheet" href="../styleSheets/allArtists.css">
 </head>
+
 <body>
-	<h1>This page is currently under construction</h1>
-    <footer>
-        <hr />
-        <a href="index.html"><img id="home" src="../images/home.png" /></a>
-        <p id="footerRight">Revised 10/2015 Fred O'Hara</p>
-    </footer>    
+    <div class="container">
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="centerText">Meet Our Artists</h1>
+                    <hr />
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 centerText">
+                    <h2>Hello!</h2>
+                    <p>This page contains a complete list of all of our artists, arranged in alphabetical order. To learn more
+                        about any particular artist, click on their name.
+                    </p>
+                    <p>
+                        Artists join daily, so check back often!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="profiles">
+                        <a href="artistOHara.html" title="Click here to learn more about this artist" target="_blank">
+                            <div class="artist">
+                                <div class="centerImage">
+                                    <img src="../images/artist_1.jpg" alt="Fred">
+                                </div>
+                                <p><strong>Fred O'Hara</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="profiles">
+                        <a href="artistOHara.html" title="Click here to learn more about this artist" target="_blank">
+                            <div class="artist">
+                                <div class="centerImage">
+                                    <img src="../images/artist_2.jpg" alt="Fred">
+                                </div>
+                                <p><strong>Bob Huggins</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="profiles">
+                        <a href="artistOHara.html" title="Click here to learn more about this artist" target="_blank">
+                            <div class="artist">
+                                <div class="centerImage">
+                                    <img src="../images/artist_3.jpg" alt="">
+                                </div>
+                                <p><strong>Frank Sanders</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="profiles">
+                        <a href="artistOHara.html" title="Click here to learn more about this artist" target="_blank">
+                            <div class="artist">
+                                <div class="centerImage">
+                                    <img src="../images/artist_4.jpg" alt="">
+                                </div>
+                                <p><strong>Barbara O'Toole</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr />
+                    <a href="index.html"><img id="home" src="../images/home.png" /></a>
+                    <script>
+                        // Define two variables for the program to use
+                        var renderedDate;
+                        var revisedDate;
+                    
+                        // Assign date and time content to the variables       
+                        renderedDate = new Date();             // assign current date
+                        revisedDate  = new Date(document.lastModified);  // assign revised date
+                    
+                        // Deliver the variables content to the Web page 
+                        document.write("<div id='footerRight'>");
+                        document.write("Revised: " + revisedDate.toLocaleString() + " by Fred O'Hara");
+                        document.write("</div>");
+                    </script>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

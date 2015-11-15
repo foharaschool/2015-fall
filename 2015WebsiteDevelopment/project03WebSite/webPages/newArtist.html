@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
     crossorigin="anonymous">
     <link rel="stylesheet" href="../styleSheets/main.css">
-    <link rel="stylesheet" href="../styleSheets/newFriend.css">
+    <link rel="stylesheet" href="../styleSheets/newartist.css">
 </head>
 
 <body>
@@ -40,23 +40,25 @@
     </div>
     <section class="col-md-8 col-md-offset-2">
         <div class="form">
-            <form role="form" name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
+            <form class="rounded" role="form" name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <label for="firstname">Legal First Name:</label>
                             <input type="firstname" class="form-control" placeholder="First Name" name="fname" id="firstname">
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <label for="lastname">Legal Last Name:</label>
                             <input type="lastname" class="form-control" placeholder="Last Name" name="lname" id="lastname">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label for="gender">Gender Code:</label>
                             <select type="gender" class="form-control" name="gender" id="gender">
-                                <option value="au">Male</option>
-                                <option value="br">Female</option>
-                                <option value="ca">Not Answered</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="na">Not Answered</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -117,33 +119,113 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="group-interest">Interested in Local Group?</label>
+                    <div class="row">
+                        <label class="col-md-3" for="media">Your Media</label>
+                    </div>
+                    <div class="row checkbx-mrgn">
+                        <div class="col-md-2 checkbx">
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media1" value="ceramic">Ceramic</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media2" value="fabric">Fabric</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media3" value="metal">Metal</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media4" value="paint">Paint</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media5" value="wood">Wood</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media6" value="plastic">Plastic</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media7" value="paper">Paper</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media8" value="stone">Stone</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media9" value="glass">Glass</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="media10" value="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="qnty-discount">Do you offer a discount for quantity?</label>
                     <div class="radio">
                         <label class="radio-inline">
-                            <input type="radio" name="group-interest" value="y">Yes
+                            <input type="radio" name="qnty-discount" value="y">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="group-interest" value="n">No
+                            <input type="radio" name="qnty-discount" value="n">No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="prof-name">Do you work under a professional name?</label>
+                    <div class="radio">
+                        <label class="radio-inline">
+                            <input type="radio" name="prof-name" value="y">Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="prof-name" value="n">No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="original">Agree to Sell only your own work?</label>
+                    <div class="radio">
+                        <label class="radio-inline">
+                            <input type="radio" name="original" value="y">Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="original" value="n">No
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-md-4">
-                            <label for="pay">Payment Info:</label>
-                            <select type="pay" class="form-control" name="pay" id="pay">
-                                <option name="pay" value="bl01">Bill Me</option>
-                                <option name="pay" value="ck01">Pay now by Check</option>
-                                <option name="pay" value="mo01">Pay now by Money Order</option>
-                            </select>
+                        <div class="col-md-6">
+                            <label for="usr">Name:</label>
+                            <input type="text" class="form-control" placeholder="Username" name="usr" id="usr">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" placeholder="Password" name="pwd" id="pwd">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="cnfmpwd">Password:</label>
+                            <input type="password" class="form-control" placeholder="Confirm Password" name="cnfmpwd" id="cnfmpwd">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="comment">Comment:</label>
-                            <textarea class="form-control" placeholder="Your Comment" rows="5" name="comment" id="comment"></textarea>
+                            <label for="bio">Short Bio:</label>
+                            <textarea class="form-control" placeholder="Your bio" rows="5" name="bio" id="bio"></textarea>
                         </div>
                     </div>
                 </div>

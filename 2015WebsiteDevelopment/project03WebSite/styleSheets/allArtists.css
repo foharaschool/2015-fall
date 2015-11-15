@@ -1,11 +1,40 @@
-h1 {
-	font-size: 5em;
-}
-
 #home {
     width: 50px;
 }
 
 #footerRight {
     text-align: right;
+}
+
+a:link {
+    color: black;
+}
+.artist:hover {
+    background-color: orangered;
+}
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: red;
+}
+
+.artist {
+    background-color: sandybrown;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.centerImage {
+    margin: 5px auto;
+}
+
+.centerImage img {
+    border-radius: 8px;
+}
+
+.profiles {
+    margin: 10px;
 }
