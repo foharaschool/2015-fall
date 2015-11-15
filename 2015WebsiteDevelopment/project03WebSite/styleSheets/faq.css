@@ -1,0 +1,36 @@
+
+#home {
+    width: 50px;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+.artistQ {
+    border: 2px solid darkred;
+    float: right;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: lightgoldenrodyellow;   
+}
+
+.futureD {
+    border: 4px outset darkred;
+    margin: 5px 100px;
+    padding: 15px;
+    background-color: lightgoldenrodyellow;
+}
+
+body {
+    margin: 0px 15px;
+}
+
+.faqContainer {
+    margin: 5px 10px;
+    background-color: azure;
+    border-radius: 10px;
+    padding: 5px;
+}

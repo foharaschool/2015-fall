@@ -7,10 +7,22 @@
 function lab07whileKnownCountPart1() {
     // PART 1: YOUR CODE STARTS AFTER THIS LINE
     
-    // Delete the following statement when you start your code.
-    document.write("This is the function \"lab07whileKnownCountPart1()\" " 
-            + "<br />and is in the JavaScript file: " 
-            + "\"/unit4/jsFiles/lab07whileKnownCount.js\"");
+    // Declare Variables
+    var loopCounter = 1;
+    var maximumLoop;
+    var total = 0;
+    
+    //Prompt the user to enter the loop number and perform the loop
+    maximumLoop = Number(prompt("enter the number of times you'd like to loop"));
+    
+    while(loopCounter <= maximumLoop) {
+        total += loopCounter;
+        document.write("In loop " + loopCounter + " the total is " + total + ".<br />");
+        loopCounter++;
+    }
+    document.write("<br />The final total is " + total + ".");
+
+
 }
 
 /*
@@ -22,10 +34,16 @@ function lab07whileKnownCountPart1() {
 function lab07whileKnownCountPart2() {
     // PART 2: YOUR CODE STARTS AFTER THIS LINE
     
+    // Declare and assign variables
+    var loopCounter = 1;
+    var loopMaximum = 20;
+    var baseMultiplier = 7;
     
-    // Delete the following statement when you start your code.
-    document.write("This is the function \"lab07whileKnownCountPart2()\" " 
-            + "<br />and is in the JavaScript file: " 
-            + "\"/unit4/jsFiles/lab07whileKnownCount.js\"");
-
+    // Do all the looping!
+    while(loopCounter <= loopMaximum) {
+        var product;
+        product = loopCounter * baseMultiplier;
+        document.write(baseMultiplier + " x " + loopCounter + " = " + product + "<br />");
+        loopCounter++;
+    }
 }

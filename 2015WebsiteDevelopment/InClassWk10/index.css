@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+    color: ghostwhite;
+}
+
+table, tr, th, td {
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+th {
+    width: 200px;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Join the Arte Del Mundo Artist Family</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../styleSheets/main.css">
+    <link rel="stylesheet" href="../styleSheets/newFriend.css">
+</head>
+
+<body>
+    <div class="col-md-12 centerText">
+        <h1>New Artist Application Form</h1>
+        <p>For Use by Artists Wishing to Joing the Arte Del Mundo Family of Artists.</p>
+        <hr />
+    </div>
+    <section class="col-md-12">
+        <h2 class="centerText">Fill out this form if you wish to begin selling your products with us!</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="centerText">Personal ID</h3>
+                <p class="centerText">Please be patient while we process this information. We will provide you with an ID number and Password.
+                    Once you receive this, you may begin sending data regarding the specifics of yor product.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="centerText">Originality</h3>
+                <p class="centerText">We only sell originally made products</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="centerText">Your Own Page!</h3>
+                <p class="centerText">The information you provide wil help us to build a page that tells your story. Once complete, a staff member
+                    will be in contact to further discuss your information.
+                </p>
+            </div>
+        </div>
+    </section>
+    </div>
+    <section class="col-md-8 col-md-offset-2">
+        <div class="form">
+            <form role="form" name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="firstname">Legal First Name:</label>
+                            <input type="firstname" class="form-control" placeholder="First Name" name="fname" id="firstname">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="lastname">Legal Last Name:</label>
+                            <input type="lastname" class="form-control" placeholder="Last Name" name="lname" id="lastname">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="gender">Gender Code:</label>
+                            <select type="gender" class="form-control" name="gender" id="gender">
+                                <option value="au">Male</option>
+                                <option value="br">Female</option>
+                                <option value="ca">Not Answered</option>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="add1">Address 1:</label>
+                            <input type="add1" class="form-control" name="add1" id="add1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="add2">Address 2:</label>
+                            <input type="add2" class="form-control" name="add2" id="add2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="city">City:</label>
+                            <input type="city" class="form-control" placeholder="City" name="city" id="city">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="state">State:</label>
+                            <input type="state" class="form-control" placeholder="State" name="state" id="state">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="zip">Zip:</label>
+                            <input type="zip" class="form-control" placeholder="Zip" name="zip" id="zip">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="country">Country:</label>
+                            <select type="country" class="form-control" name="country" id="country">
+                                <option value="au">Australia</option>
+                                <option value="br">Brazil</option>
+                                <option value="ca">Canada</option>
+                                <option value="zh">China</option>
+                                <option value="hy">Hungary</option>
+                                <option value="ru">Russia</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="th">Thailand</option>
+                                <option value="vn">Vietnam</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="tel">Phone:</label>
+                            <input type="tel" class="form-control" name="tel" id="tel">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" placeholder="example@example.com" name="email" id="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="group-interest">Interested in Local Group?</label>
+                    <div class="radio">
+                        <label class="radio-inline">
+                            <input type="radio" name="group-interest" value="y">Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="group-interest" value="n">No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="pay">Payment Info:</label>
+                            <select type="pay" class="form-control" name="pay" id="pay">
+                                <option name="pay" value="bl01">Bill Me</option>
+                                <option name="pay" value="ck01">Pay now by Check</option>
+                                <option name="pay" value="mo01">Pay now by Money Order</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="comment">Comment:</label>
+                            <textarea class="form-control" placeholder="Your Comment" rows="5" name="comment" id="comment"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" value="Submit" class="btn btn-default">Submit</button>
+                <button type="reset" value="Clear" class="btn btn-default">Clear</button>
+            </form>
+        </div>
+    </section>
+    <footer class="col-md-12">
+        <hr />
+        <a href="index.html"><img id="home" src="../images/home.png" /></a>
+        <p id="footerRight">Revised 10/2015 Fred O'Hara</p>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

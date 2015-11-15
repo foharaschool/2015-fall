@@ -5,11 +5,20 @@
 */
 function exercise9Part1() {
     // PART 1: YOUR CODE STARTS AFTER THIS LINE
+    var numTotal = 0;
+    var userNum = Number(prompt("Enter a number"));
+    numTotal += userNum;
+    document.write("Entered Number: " + userNum + ", Current Total: " + numTotal + "<br />");
     
-    // Delete the following statement when you start your code.
-    document.write("This function is named \"exercise9Part1()\" " 
-            + "<br />and is in the JavaScript file: " 
-            + "\"/unit4/jsFiles/exercise-9.js\"");
+    while(numTotal <= 1000) {
+        userNum = Number(prompt("Enter another number"));
+        numTotal += userNum;
+        document.write("Entered Number: " + userNum + ", Current Total: " + numTotal + "<br />");
+        
+    }
+    
+    document.write ("<br />The final total is " + numTotal)
+    
 }
 
 

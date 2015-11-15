@@ -1,0 +1,48 @@
+.flag {
+    width: 320px;
+    margin: 25px auto;
+    text-align: center;
+}
+.flag img {
+    margin-bottom: 10px;
+}
+
+a:link {
+    color: black;
+}
+.artist:hover {
+    background-color: orangered;
+}
+
+a:visited {
+    color: red;
+}
+
+.profiles {
+    margin: 25px auto;
+    width: 850px;
+}
+.profiles ::after {
+    clear: both;
+}
+
+.artist {
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 200px;
+    background-color: sandybrown;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.centerImage {
+    width: 160px;
+    margin: 5px auto;
+}
+
+.centerImage img {
+    border-radius: 8px;
+    margin-top: 10px;
+}
