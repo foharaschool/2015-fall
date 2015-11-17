@@ -41,3 +41,16 @@ footer {
     width: 150px;
     margin: 0 auto;
 }
+
+a:link {
+	color: #FFE019; 
+}
+
+a:hover {
+	color: darkred;
+	text-decoration: none;
+}
+
+a:visited {
+	color: antiquewhite;
+}

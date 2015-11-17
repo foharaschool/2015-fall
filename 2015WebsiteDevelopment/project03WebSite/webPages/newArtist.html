@@ -16,7 +16,7 @@
         <p>For Use by Artists Wishing to Joing the Arte Del Mundo Family of Artists.</p>
         <hr />
     </div>
-    <section class="col-md-12">
+    <section class="col-md-12 mrgn-bttm">
         <h2 class="centerText">Fill out this form if you wish to begin selling your products with us!</h2>
         <div class="row">
             <div class="col-md-4">
@@ -204,7 +204,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="usr">Name:</label>
+                            <label for="usr">Username:</label>
                             <input type="text" class="form-control" placeholder="Username" name="usr" id="usr">
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="cnfmpwd">Password:</label>
+                            <label for="cnfmpwd">Confirm Password:</label>
                             <input type="password" class="form-control" placeholder="Confirm Password" name="cnfmpwd" id="cnfmpwd">
                         </div>
                     </div>
@@ -237,7 +237,20 @@
     <footer class="col-md-12">
         <hr />
         <a href="index.html"><img id="home" src="../images/home.png" /></a>
-        <p id="footerRight">Revised 10/2015 Fred O'Hara</p>
+        <script>
+            // Define two variables for the program to use
+            var renderedDate;
+            var revisedDate;
+        
+            // Assign date and time content to the variables       
+            renderedDate = new Date();             // assign current date
+            revisedDate  = new Date(document.lastModified);  // assign revised date
+        
+            // Deliver the variables content to the Web page 
+            document.write("<div id='footerRight'>");
+            document.write("Revised: " + revisedDate.toLocaleString() + " by Fred O'Hara");
+            document.write("</div>");
+        </script>
     </footer>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

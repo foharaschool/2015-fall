@@ -26,3 +26,7 @@
 .col-md-12::after {
     clear:both;
 }
+
+.mrgn-bttm {
+    margin-bottom: 20px;
+}
