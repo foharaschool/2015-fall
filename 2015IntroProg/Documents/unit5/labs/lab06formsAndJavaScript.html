@@ -110,8 +110,37 @@ Madison, WI 53704<br />
 <!--
   Add your form after this.
 -->
+<div id="addressId" style="padding-left: 25px;">
+        <form id="addressFormId" action="lab06formsAndJavaScript.html#" onsubmit="return displayformattedAddress();">
+    <label class="formLabel" 
+           for="addressId">Adress:<br />
+    </label><input id="adressId" 
+                   name="address"><br style="clear:left;" />
+    <label class="formLabel" 
+           for="cityId">City:<br />
+    </label><input id="cityId" 
+                   name="city"><br style="clear:left;" />
+    <label class="formLabel" 
+           for="stateId">State:<br />
+    </label><input id="stateId" name="state"><br style="clear:left;" />
+    <label class="formLabel" 
+           for="zipId">Zipcode:<br />
+    </label><input id="zipId" name="zip"><br style="clear:left;" />
+    <input type="submit" 
+           name="runExample" 
+           value="Enter" 
+           class="formSubmit"
+    />
+    <input type="button" 
+           name="resetExample" 
+           value="Reset" 
+           class="formSubmit"
+           onclick="return resetGreetingForm();"
+    />
+  </form>
+</div>
 
-
+<div id="addressReturnDiv" style="margin-top: 25px;"></div>
 
 
 
