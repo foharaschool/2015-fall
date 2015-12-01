@@ -1,0 +1,97 @@
+<html>
+<head>
+ <!--      
+        your name      yyyy/mm/dd  
+ -->
+<title>Cheese Information Request</title> 
+<meta charset="UTF-8" />
+<script src="../javaScriptFiles/formValidation02.js"></script>
+<link  href="../styleSheets/formValidation02.css" 
+      rel="stylesheet"
+      type="text/css"  />
+<script>
+  document.createElement('header');
+  document.createElement('footer');
+  document.createElement('nav');
+  document.createElement('aside');
+  document.createElement('section');
+  document.createElement('article');  
+</script>
+ 
+</head>
+
+<body>
+
+<header>
+   <h3>Cheese Information Request Form</h3>
+</header>
+
+<article>
+
+   <p id="instructions">If you have questions about any kind of cheese, and/or
+      it's availability in your area, please fill out this form and submit it to
+      us.  Our experts will completely research it for you, and get back to you.
+      Only one kind of cheese per inquiry please.
+      <br /><br />
+      Cheddar Cheese Products, Inc. / Cheeseland, WI.
+   </p>
+</article>
+
+<article>
+ <form name="cform" id="cform" action="http://itins3.madisoncollege.edu/echo.php" 
+       method="post" 
+       onSubmit="return checkAllInputs();" >
+
+ <label for="lastNameFld" class="setWidth">
+    Key your last name here:
+ </label>
+ <input type="text"
+        id="lastNameFld"
+        name="lastNameFld"
+        size="25"
+        maxlength="25" />
+         <br /><br /> 
+
+ <label for="cheeseFld" class="setWidth">
+    Key the name of the cheese of interest here:
+ </label>
+ <input type="text" 
+        id="cheeseFld" 
+        name="cheeseFld" 
+        size="30" 
+        maxlength="30"  />
+         <br /><br /> 
+
+ <label for="telephoneFld"  class="setWidth">
+    Key your telephone here (include area code):
+ </label>
+ <input type="text" 
+        id="telephoneFld" 
+        name="telephoneFld" 
+        size="14" 
+        maxlength="14"
+        placeholder="nnn-nnn-nnnn" /> 
+         <br /><br />
+
+ <label for="zipCodeFld"  class="setWidth">
+    Key your zipcode here:
+ </label>
+ <input type="text" 
+        id="zipCodeFld" 
+        name="zipCodeFld" 
+        size="10" 
+        maxlength="10" 
+        placeholder="nnnnn-nnnn"/> 
+         <br />
+  <p>
+   Please call me at the above number with cheese information.
+  </p>
+   
+  <p>
+  <input type="reset"  />  (Or use [Ctrl+F5] to reset the form) &nbsp;&nbsp; 
+  <input type="submit" value="Send Information Request" />
+  </p>
+ </form>
+</article> 
+</body>
+</html>

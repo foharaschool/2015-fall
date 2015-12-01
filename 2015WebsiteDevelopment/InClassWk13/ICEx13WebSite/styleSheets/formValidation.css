@@ -1,0 +1,53 @@
+/* 
+   Author:        your name
+   Date Created:  yyyy/mm/dd
+*/
+
+/*
+   Display HTML5 structural elements (ref: pg 18) as blocks
+   (aka "grouping elements"--ref pg 26.)
+*/
+
+header, footer, nav, section, article, aside {
+        display: block;   
+}
+
+/* -------------------------------------------------------*/
+
+  body       {  
+      margin: 2em;
+  }
+
+
+  header h2  {
+      text-align: center;
+      border: .2em ridge blue;
+      padding: 1em;
+      background-color: #ebf5fc;
+                
+  }
+
+  
+  h3        {
+      text-align: center;
+  }
+
+  p#instructions {
+      margin-left: 2em;  
+  }
+
+  form      {
+      margin-left: 2em;
+      background-color: orange;
+      padding: 2em;
+  }
+
+  label.setWidth {
+      width: 18em;
+      display: inline-block;
+  }
+
+#errors p {
+  margin: 3px 20px;
+  color: red;
+}
