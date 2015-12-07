@@ -1,0 +1,37 @@
+#home {
+    width: 50px;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+.form {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: bisque;
+    border-radius: 8px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.col-md-12::after {
+    clear:both;
+}
+
+.checkbx {
+    border: 1px solid black;
+    margin: 0 17px;
+}
+
+.checkbx-mrgn {
+    margin-top: 0px;
+}
+
+.measure {
+    margin-top: 30px;
+    margin-bottom: 0;
+}

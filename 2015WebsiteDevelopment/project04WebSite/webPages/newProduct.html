@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form to Add a New Product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../styleSheets/main.css">
+    <link rel="stylesheet" href="../styleSheets/newProduct.css">
+</head>
+
+<body>
+    <div class="col-md-12 centerText">
+        <h1>New Product Notification Form</h1>
+        <p>For Use by Arte Del Mundo Artists Only</p>
+        <hr />
+    </div>
+    <section class="col-md-12">
+        <h2 class="centerText">Fill out this form if you wish to begin selling a new type of product.</h2>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+                <h3 class="centerText">Product Page</h3>
+                <p class="centerText">The information provided in this form will be used to generate a new web page for your product. This form
+                    is only for use by Arte Del Mundo Artists.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="centerText">Not a Member Artist?</h3>
+                <p class="centerText">Please fil out a <a href="newArtist.html">New Artist Form</a>. Once you receive your ID and password, you
+                    will than be able to submit new products via this form.
+                </p>
+            </div>
+        </div>
+    </section>
+    </div>
+    <section class="col-md-8 col-md-offset-2">
+        <div class="form">
+            <form class="rounded" role="form" name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="idnum">Artist ID:</label>
+                            <input type="text" class="form-control" maxlength="8" placeholder="ID number" name="idnum" id="idnum">
+                        </div>
+                        <div class="col-md-6 col-md-offset-2">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" maxlength="15" placeholder="Password" name="pwd" id="pwd">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="prc">Product Price:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control" maxlength="7" name="prc" id="prc">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="prdcat">Category:</label>
+                            <select class="form-control" name="prdcat" id="prdcat">
+                                <option value="bdwk">Beadwork</option>
+                                <option value="jewel">Jewelry</option>
+                                <option value="pott">Pottery</option>
+                                <option value="carv">Carving</option>
+                                <option value="wdwk">Wood Working</option>
+                                <option value="msc">Mosaics</option>
+                                <option value="ndlcft">Needlecraft</option>
+                                <option value="paper">Paper</option>
+                                <option value="ogmi">Oragami</option>
+                                <option value="paperm">Paper Mache</option>
+                                <option value="bskt">Basketry</option>
+                                <option value="wfab">Woven Fabric</option>
+                                <option value="wnonfab">Woven Non-Fabric</option>
+                                <option value="paint">Painting</option>
+                                <option value="mtl">Metal Working</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="prdwt">Product Weight:</label>
+                            <input type="text" class="form-control" name="prdwt" id="prdwt">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="radio measure">
+                                <label class="radio-inline">
+                                    <input type="radio" name="unit-measure" value="kg" checked="checked">kg
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="unit-measure" value="oz">oz
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="unit-measure" value="lbs">lbs
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="org">Organic Percentage:</label>
+                            <div class="input-group">
+                                <input type="text" maxlength="4" class="form-control" placeholder="Percent Organic" name="org" id="org">
+                                <span class="input-group-addon">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="prd-avail">Is product available now?</label>
+                            <div class="radio">
+                                <label class="radio-inline">
+                                    <input type="radio" name="prd-avail" value="y">Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="prd-avail" value="n">No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="prd-desc">Product Description:</label>
+                            <textarea class="form-control" maxlength="1000" placeholder="Describe Product" rows="5" name="prd-desc" id="prd-desc"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" value="Submit" class="btn btn-default">Submit</button>
+                <button type="reset" value="Clear" class="btn btn-default">Clear</button>
+            </form>
+        </div>
+    </section>
+    <footer class="col-md-12">
+        <hr />
+        <a href="index.html"><img id="home" src="../images/home.png" /></a>
+        <p id="footerRight">Revised 11/2015 Fred O'Hara</p>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

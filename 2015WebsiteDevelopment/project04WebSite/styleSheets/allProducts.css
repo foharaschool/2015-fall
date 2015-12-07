@@ -1,0 +1,23 @@
+#home {
+    width: 50px;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+.prod-img {
+    height: 100px;
+}
+
+.prod-tbl {
+    text-align: center;
+}
+
+.table {
+    background-color: tan;
+}
+
+.prod-hero {
+    height: 300px;
+}

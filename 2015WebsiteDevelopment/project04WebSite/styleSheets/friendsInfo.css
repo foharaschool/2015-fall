@@ -1,0 +1,45 @@
+html {
+    background-image: url(../images/sky.jpg);
+}
+
+body {
+    margin: 5px 20px;
+    background-image: url(../images/texture1.gif);
+    border-radius: 5px;
+    padding: 2px 0;
+    
+}
+
+.padding-wrapper {
+    padding: 0 20px;
+}
+
+#title {
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.centerText {
+	text-align: center;
+	display: block;
+}
+
+.banner {
+    width: 100%;
+}
+
+#home {
+    width: 50px;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+hr {
+    margin: 0;
+}
+
+h2 {
+   margin-top: 45px; 
+}

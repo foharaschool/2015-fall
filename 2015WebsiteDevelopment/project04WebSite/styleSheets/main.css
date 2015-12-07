@@ -1,0 +1,56 @@
+body {
+	background-color: #ACD5FF;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+.centerText {
+	text-align: center;
+}
+
+.centerShadowText {
+	text-align: center;
+	text-shadow: gray 2px 2px;
+}
+
+.shadowText {
+	text-shadow: gray 2px 2px;
+	
+}
+
+.shadowBox {
+	box-shadow: gray 5px 5px;
+}
+
+footer {
+    margin-top: 25px;
+    clear: both;
+}
+
+#footerRight {
+    text-align: right;
+}
+
+.navButtons {
+    width: 50px;
+    margin: 5px 10px;
+}
+.buttonDiv {
+    width: 150px;
+    margin: 0 auto;
+}
+
+a:link {
+	color: #FFE019; 
+}
+
+a:hover {
+	color: darkred;
+	text-decoration: none;
+}
+
+a:visited {
+	color: antiquewhite;
+}
