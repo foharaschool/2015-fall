@@ -54,3 +54,7 @@ a:hover {
 a:visited {
 	color: antiquewhite;
 }
+
+.has-error input, .has-error select, .has-error textarea{
+    background-color: yellow;
+}

@@ -8,6 +8,13 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="../styleSheets/main.css">
     <link rel="stylesheet" href="../styleSheets/newProduct.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
+    <script src="../javaScriptFiles/newProduct.js"></script>
+    </body>
 </head>
 
 <body>
@@ -36,7 +43,11 @@
     </div>
     <section class="col-md-8 col-md-offset-2">
         <div class="form">
-            <form class="rounded" role="form" name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
+            <form class="rounded" role="form" name="form01" 
+                    action="http://itins3.madisoncollege.edu/echo.php" 
+                    method="post"
+                    onsubmit="return formValidationProduct();"
+                    onreset="return formClearProduct();">
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-4">
@@ -61,6 +72,7 @@
                         <div class="col-md-4">
                             <label for="prdcat">Category:</label>
                             <select class="form-control" name="prdcat" id="prdcat">
+                                <option value="select-one">Select one</option>
                                 <option value="bdwk">Beadwork</option>
                                 <option value="jewel">Jewelry</option>
                                 <option value="pott">Pottery</option>
@@ -144,11 +156,5 @@
         <a href="index.html"><img id="home" src="../images/home.png" /></a>
         <p id="footerRight">Revised 11/2015 Fred O'Hara</p>
     </footer>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
-    crossorigin="anonymous"></script>
-</body>
 
 </html>

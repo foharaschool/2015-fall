@@ -1,0 +1,105 @@
+<html>
+<head>
+ <!--      
+        your name      yyyy/mm/dd  
+ -->
+<title>Cheese Shipment Inquiry Form</title> 
+<meta charset="UTF-8" />
+<script src="../javaScriptFiles/formValidation.js"></script>
+<link href="../styleSheets/formValidation.css" 
+      rel="stylesheet"
+      type="text/css"  />
+<script>
+  document.createElement('header');
+  document.createElement('footer');
+  document.createElement('nav');
+  document.createElement('aside');
+  document.createElement('section');
+  document.createElement('article');  
+</script>
+ 
+</head>
+
+<body onload="setInitialFocus();">
+
+<header>
+   <h3>Cheese Shipment Inquiry Form</h3>
+</header>
+
+<article>
+
+   <p id="instructions">If you have questions/concerns about your last Cheese order, please 
+      fill out this form and submit it to us.
+      <br />
+      Cheddar Cheese Products, Inc. / Cheeseland, WI.
+   </p>
+</article>
+
+<article>
+ <form name="cform" id="cform" action="http://itins3.madisoncollege.edu/echo.php" 
+       method="post" 
+       onSubmit="return checkAllTextBoxes2();"
+       onreset="setInitialFocus();" >
+
+ <label for="lastNameFld" class="setWidth">
+    Key your last name here&nbsp;
+ </label>
+ <input type="text"
+        id="lastNameFld"
+        name="lastNameFld"
+        size="25"
+        maxlength="25" />
+         <br /><br /> 
+
+ <label for="invoiceFld" class="setWidth">
+    Key the 5-digit invoice number here&nbsp;
+ </label>
+ <input type="text" 
+        id="invoiceFld" 
+        name="invoiceFld" 
+        size="5" 
+        maxlength="5"  />
+        <br /><br /> 
+
+ <label for="invoiceFld2" class="setWidth">
+    Re-Key the 5-digit invoice number here&nbsp;
+ </label>
+ <input type="text" 
+        id="invoiceFld2" 
+        name="invoiceFld2" 
+        size="5" 
+        maxlength="5"  />
+        <br /><br /> 
+        
+ <label for="telFld"  class="setWidth">
+    Key your telephone here (include area code)&nbsp;
+ </label>
+ <input type="text" 
+        id="telFld" 
+        name="telFld" 
+        size="10" 
+        maxlength="10"  /> 
+         <br />
+         <br />
+         
+  <label for="areaOfConcern"  class="setWidth">
+      Choose area of concern&nbsp;
+  </label>
+ 
+  <select name="areaOfConcern" id="areaOfConcern">
+    <option value="faux">Choose an area</option>
+    <option value="0001">Order didn't arrive</option>
+    <option value="0002">Order arrived damaged</option>
+  </select> 
+  <br />         
+  <p>
+   Please call me at the above number about the specified cheese shipment.
+  </p>
+
+  <input type="reset"  />  &nbsp; 
+  <input type="submit" />
+ </form>
+</article> 
+</body>
+</html>
+
