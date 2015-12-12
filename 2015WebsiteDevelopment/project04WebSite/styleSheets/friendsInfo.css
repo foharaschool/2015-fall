@@ -26,6 +26,8 @@ body {
 
 .banner {
     width: 100%;
+    background-image: url(../images/friends.jpg);
+    min-height: 500px;
 }
 
 #home {
@@ -42,4 +44,22 @@ hr {
 
 h2 {
    margin-top: 45px; 
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cling-left {
+    padding-left: 0px;
+    padding-top: 50px;
+    background-color: rgba(0, 191, 255, .6);
+    min-height: 500px;
+    display: none;
+}
+
+form {
+    padding-left: 15px;
 }

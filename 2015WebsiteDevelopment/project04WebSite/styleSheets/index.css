@@ -54,6 +54,7 @@ footer {
 
 hr {
     margin: 0;
+    margin-bottom: 5px;
 }
 
 h2 {
@@ -70,7 +71,6 @@ nav a:link {
 
 nav a:hover {
     color: darkgoldenrod;
-    font-size: 1.4em;
     text-shadow: black 2px 2px 2px;
 }
 

@@ -1,43 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Friends of Arte Del Mundo</title>
-	<link rel="stylesheet" href="../styleSheets/friendsInfo.css">
+    <meta charset="UTF-8">
+    <title>Friends of Arte Del Mundo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../styleSheets/friendsInfo.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
+    <script src="../javaScriptFiles/friendsInfo.js"></script>
 </head>
+
 <body>
+    <div class="container-fluid">
     <header class="padding-wrapper">
         <h1 id="title" class="centerText">Friends of Arte Del Mundo</h1>
-        <p class="centerText">We'd love to have you as a friend.  Click <a href="newFriend.html">here</a> to join the friends 
-        of Friends of Arte Del Mundo</p>
+        <p class="centerText">We'd love to have you as a friend. Click <a href="newFriend.html">here</a> to join the friends of Friends of Arte
+            Del Mundo</p>
     </header>
-    <article><img class="banner" src="../images/friends.jpg"</article>
+    <article class="banner">
+       <section class="col-md-4 cling-left toggle-able">
+        <div class="form">
+            <form role="form" name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="firstname">First Name:</label>
+                            <input type="firstname" class="form-control" placeholder="First Name" name="fname" id="firstname">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" placeholder="example@example.com" name="email" id="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="question">Question:</label>
+                            <textarea class="form-control" placeholder="Your Question" rows="5" name="question" id="question"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" value="Submit" class="btn btn-default">Submit</button>
+                <button type="reset" value="Clear" class="btn btn-default">Clear</button>
+            </form> 
+    </article>
     <div class="padding-wrapper">
-    <article>
-       <h2>Who Can Be a Friend? Everyone!</h2>
-       <p>Anyone can become a Friend of Arte Del Mundo, and help this worthy enterprise to grow and prosper. You don’t 
-          have to know anything about art. In fact, one of the benefits of becoming a Friend is that you can learn about 
-          various kinds of art, and how the artists create their works. See the benefits list below.</p> 
-    </article>
-    <article>
-        <h2>The Cost is Minimal and the Benefits are Many!</h2>
-        <p>The cost to be a Friend is only 20 USD per year, and provides some nice benefits beyond just the satisfaction
-           of knowing you are helping local artists fulfill their dreams:</p>
-        <ul>
-            <li>Friends receive a quarterly newsletter by email. Fascinating articles give friends the latest in art news, as well as an inside look at the lives and secrets of our family of artists. Amaze your in-person friends at your next gathering with your detailed knowledge of the secrets of hand-woven tapestries, hand-dipped candles, and so much more. To be a Friend is to have a whole new world open to you, one artist at a time.</li>
-            <li>Friends receive email notifications about all new products approximately two weeks prior to their public posting on this site.</li>
-            <li>Friends may opt to meet in person at Friends events, if a group has been started in your area.</li>
-        </ul>
-    </article>
-    <article>
-        <h2>Join Today!</h2>
-        <p>Join today, using the <a href="newFriend.html">Friend form</a> on this site.</p><br />
-    </article>
-    <footer>
-        <hr />
-        <a href="index.html"><img id="home" src="../images/home.png" /></a>
-        <p id="footerRight">Revised 10/2015 Fred O'Hara</p>
-    </footer>
+            <button class="toggle-able" type="friendForm" onclick="toggleForm();">Have a question for the friends group?</button>
+            <article>
+                <h2>Who Can Be a Friend? Everyone!</h2>
+                <p>Anyone can become a Friend of Arte Del Mundo, and help this worthy enterprise to grow and prosper. You don’t
+                    have to know anything about art. In fact, one of the benefits of becoming a Friend is that you can learn
+                    about various kinds of art, and how the artists create their works. See the benefits list below.</p>
+            </article>
+            <article>
+                <h2>The Cost is Minimal and the Benefits are Many!</h2>
+                <p>The cost to be a Friend is only 20 USD per year, and provides some nice benefits beyond just the satisfaction
+                    of knowing you are helping local artists fulfill their dreams:</p>
+                <ul>
+                    <li>Friends receive a quarterly newsletter by email. Fascinating articles give friends the latest in art
+                        news, as well as an inside look at the lives and secrets of our family of artists. Amaze your in-person
+                        friends at your next gathering with your detailed knowledge of the secrets of hand-woven tapestries,
+                        hand-dipped candles, and so much more. To be a Friend is to have a whole new world open to you, one
+                        artist at a time.</li>
+                    <li>Friends receive email notifications about all new products approximately two weeks prior to their public
+                        posting on this site.</li>
+                    <li>Friends may opt to meet in person at Friends events, if a group has been started in your area.</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Join Today!</h2>
+                <p>Join today, using the <a href="newFriend.html">Friend form</a> on this site.</p>
+                <br />
+            </article>
+            <footer>
+                <hr />
+                <a href="index.html"><img id="home" src="../images/home.png" /></a>
+                <p id="footerRight">Revised 10/2015 Fred O'Hara</p>
+            </footer>
     </div>
+    </div>
+    </
 </body>
+
 </html>

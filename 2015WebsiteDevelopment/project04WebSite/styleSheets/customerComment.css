@@ -26,7 +26,7 @@ label {
 	color: #909090;
 }
 
-[type='text'], textarea {
+[type='text'], textarea, .wider {
 	width: 239px;
 }
 
@@ -57,4 +57,6 @@ footer div {
     margin-left: 20px;
 }
 
-
+.hidden {
+    display: none;
+}

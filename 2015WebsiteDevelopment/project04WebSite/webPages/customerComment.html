@@ -6,40 +6,67 @@
     <title>Customer Comment</title>
     <link rel="stylesheet" href="../styleSheets/main.css">
     <link rel="stylesheet" href="../styleSheets/customerComment.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+    crossorigin="anonymous"></script>
+    <script src="../javaScriptFiles/customerComment.js"></script>
 </head>
 
 <body>
     <h1 class="centerText">Customer Comments</h1>
     <h2 class="centerText">Leave any kind of comment for the Arte Del Mundo Staff</h2>
-    <p class="centerText">Please make a printscreen of the comment prior to submitting
-        if you would like to save the comment for your records</p>
-    <div id="formContainer">
-        <form name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post">
-
-            <label>Name:</label>
-            <input type="text" name="customerName" maxlength="30" />
-
-            <br />
-            <br />
-            <label>Comment:</label>
-            <textarea name="comment"></textarea>
-
-            <br />
-            <br />
-            <div id="buttonContainer">
-                <input type="submit" value="Submit" />
-                <input type="reset" value="Clear" />
+    <p class="centerText">Please make a printscreen of the comment prior to submitting if you would like to save the comment for your records</p>
+    <div id="formContainer" class="form">
+        <form role="form" name="form01" action="http://itins3.madisoncollege.edu/echo.php" method="post" onsubmit="return validateCustomerCommment();"
+        onreset="formClearComment();">
+            <div class="form-group">
+                <label>Name:</label>
+                <input class="form-control" type="text" name="customerName" maxlength="30" />
             </div>
-        </form>
-    </div>
+            <div class="form-group">
+                <br />
+                <label>Comment:</label>
+                <textarea class="form-control" name="comment"></textarea>
 
-    <footer>
-        <hr />
-        <div class="buttonDiv">
-            <a href="index.html"><img id="home" src="../images/home.png" /></a>
+                <br />
+            </div>
+            <div class="form-group">
+                <div class="row checkbx-mrgn">
+                    <div class="col-md-2 checkbx">
+                        <div class="checkbox">
+                            <br />
+                            <input type="checkbox" name="contact" value="contact-y" onclick="toggleContactInfo();">
+                            <label for="contact" class="wider">Click here if you would like a staff person to contact you.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group hidden">
+                <br />
+                <label>Telephone</label>
+                <input class="form-control" type="text" name="phone" />
+                <br /><br />
+                <label>Email</label>
+                <input class="form-control" type="text" name="email" />
+                <br />
+                <br />
+            </div>
+                    <div id="buttonContainer">
+                        <input type="submit" value="Submit" />
+                        <input type="reset" value="Clear" />
+                    </div>
+        </form>
         </div>
-        <script>
-            // Define two variables for the program to use
+
+        <footer>
+            <hr />
+            <div class="buttonDiv">
+                <a href="index.html"><img id="home" src="../images/home.png" /></a>
+            </div>
+            <script>
+                // Define two variables for the program to use
             var renderedDate;
             var revisedDate;
         
@@ -53,9 +80,8 @@
             document.write("<br />");
             document.write("Revised: " + revisedDate.toLocaleString());
             document.write("</div>");
-
-        </script>
-    </footer>
+            </script>
+        </footer>
 </body>
 
 </html>
