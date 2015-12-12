@@ -2,15 +2,33 @@
     This is the JavaScript code for 
     "Name Entry" 
     File: /unit5/project/project5Part2.html.
-	
-	The purpose of this function is to 
 */
-function project5Part2() {
-    // Your code goes in here.
-    var output;
-    
-    output = document.getElementById('outputDiv');
+// Planning List
+// Store name
+// Output name to page on submit
 
-    output.innerHTML = "The JavaScript file for this page is: "
-            + "\"/unit5/jsFiles/project5Part2.js\"";
+// Global variables
+var nameArray = [];
+
+// The purpose of this function is to store the name and update the count
+function storeName(inputName) {
+    var counter = document.getElementById('count');
+    nameArray.push(inputName);
+    counter.innerHTML = nameArray.length;    
+}
+
+// The purpose of this function is to output the name
+function outputName(inputName) {
+    var output = document.getElementById('outputTable');
+    output.innerHTML += "<tr><td>" + inputName + "</td></tr>";
+}
+
+function project5Part2() {    
+     var enteredName = document.getElementById('nameID').value;
+    // Output name, store it, update count
+    outputName(enteredName);
+    storeName(enteredName);
+    document.getElementById('nameID').select();
+    
+    return false;
 }

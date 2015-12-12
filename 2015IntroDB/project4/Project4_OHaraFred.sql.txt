@@ -1,0 +1,103 @@
+1.  Query #1 (2 points) – Basic SELECT Statement
+a.  From the Customers table, list the CompanyName, City and Country of all 
+customers. 
+
+SELECT CompanyName, City, Country
+FROM Customers;
+
+2.  Query #2 (2 points) – Basic SELECT Statement with WHERE & ORDER BY  
+ 
+Your manager needs a list of all customers from the country of Germany.  
+a.  From the Customers table, list the CompanyName, ContactName, City, Country 
+and Phone for customers in the Country of Germany.  
+b.  Order your results by CompanyName ascending. 
+
+SELECT CompanyName, ContactName, City, Country, Phone
+FROM Customers
+WHERE Country = 'Germany'
+ORDER BY CompanyName;
+
+3.  Query #3 (2 points) – SELECT with Multiple Criteria  
+ 
+The Sales department needs a list of Products that meet the following specifications:  
+a.  From the Products table, list the ProductName, SupplierID, UnitPrice and 
+CategoryID for all products that have a UnitPrice greater than 15 dollars and 
+have a CategoryID of 4 .
+
+SELECT ProductName, SupplierID, UnitPrice, CategoryID
+FROM Products
+WHERE UnitPrice > 15
+AND CategoryID = 4;
+
+4.  Query #4 (2 points) – SELECT with Like  
+ 
+a.  From the Products table, list the ProductName, QuantityPerUnit and UnitPrice of 
+all products that have the character string  jars   somewhere in the 
+QuantityPerUnit field. Hint: Use '%jars% '   
+
+SELECT ProductName, QuantityPerUnit, UnitPrice
+FROM Products
+WHERE QuantityPerUnit LIKE '%jars%';
+
+5.  Query #5 (3 points) – SELECT with BETWEEN and sorted in descending order  
+ 
+a.  From the Products table, list the ProductName, SupplierID, UnitPrice and 
+CategoryID for all products that have a UnitPrice between 10 and 20 dollars  
+b.  Sort the results by UnitPrice descending
+
+SELECT ProductName, SupplierID, UnitPrice, CategoryID
+FROM Products
+WHERE UnitPrice BETWEEN 10 AND 20
+ORDER BY UnitPrice DESC;
+
+6.  Query #6 (3 points) – SELECT with JOIN and ORDER BY  
+ 
+a. List the Suppliers CompanyName, City, Country and Phone with their product’s 
+ProductName and UnitPrice (you will have to JOIN the Products and Suppliers 
+tables)  
+b.  Sort by supplier’s CompanyName  
+
+SELECT s.CompanyName, s.City, s.Country, s.Phone, p.ProductName, p.UnitPrice
+FROM Suppliers AS s
+JOIN Products AS p
+ON s.SupplierID = p.SupplierID
+ORDER BY s.CompanyName;
+
+7.  Query #7 (3 points) – SELECT with JOIN, Aggregate Function, GROUP BY and ORDER 
+BY 
+ 
+a.  From the Customers table, List the CompanyName, City and Country, and the 
+number of Orders they have in the Orders table  
+b.  Hints:  
+1)  Use the COUNT() function  
+2)  You will need to join the Customers and Orders tables  
+3)  You will need to GROUP BY CompanyName for MySQL 
+4)  Finally, sort by Country, City and CompanyName 
+
+SELECT c.CompanyName, c.City, c.Country, COUNT(o.CustomerID) AS 'Number of Orders'
+FROM Customers AS c
+JOIN Orders AS o
+ON c.CustomerID = o.CustomerID
+GROUP BY c.CompanyName
+ORDER BY c.Country, c.City, c.CompanyName;
+
+8.  Query #8 (3 points) – SELECT with JOIN, WHERE clause and duplicate column 
+names 
+ 
+a.  JOIN the Orders table to both the Customers and Shippers tables, and use a 
+WHERE clause to include only a ShipCountry of USA Hint: You will use 2 INNER 
+JOIN clauses. 
+b.  List the OrderID, OrderDate, ShipDate and ShipCountry from the Orders table. 
+c.  List the CompanyName from the Customers table and the CompanyName from 
+the Shippers table; Use AS to rename the first to CustomerName and the second 
+to ShipperName 
+d.  Hint: Because there are 2 columns in the SELECT clause with the same name, you 
+will need to qualify them with their respective table names or aliases
+
+SELECT o.OrderID, o.OrderDate, o.ShippedDate, o.ShipCountry, c.CompanyName AS 'CustomerName', s.CompanyName AS 'ShipperName'
+FROM Orders AS o
+JOIN Customers AS c
+ON c.CustomerID = o.CustomerID
+JOIN Shippers AS s
+ON o.ShipVia = s.ShipperID
+WHERE o.ShipCountry = 'USA';

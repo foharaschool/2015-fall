@@ -125,18 +125,20 @@
 
                 <div id="outputDiv" class="output">
                     <div id="addressId" style="padding-left: 25px;">
-                        <form id="nameEntryForm" action="project5Part2.html#" onsubmit="return project5Part2();">
-                            <label class="formLabel" for="addressId">Name:
+                        <form id="nameEntryForm" 
+                                action="project5Part2.html#" 
+                                onsubmit="return project5Part2();">
+                            <label class="formLabel" for="nameID">Name:
                                 <br />
                             </label>
-                            <input id="adressId" name="address">
+                            <input type="text" id="nameID" name="nameID">
                             <br style="clear:left;" />
                             <br />
 
                             <input type="submit" name="runExample" value="Enter" class="formSubmit" />
                         </form>
                     </div>
-
+                    <h3> Total Count: <span id="count">0</span></h3>
                     <table id="outputTable" style="margin-top: 25px;">
                         <tr>
                             <th>Name</th>
