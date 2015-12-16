@@ -175,15 +175,9 @@ function validateUserHeight(receivedUserHeight) {
 //  Output:  The function must return back into the main function one output:
 //             - the user's BMI 
 //----------------------------------------------------------------------------  
-function calculateBodyMassIndex(      ,      )  {
-
-
-          // For this project part, you must write the programming
-          // statement for this one function. Remember to work
-          // in "versions" for efficient debugging.
-
-     
-}
+ function calculateBodyMassIndex(enteredPounds, enteredInches)  {
+     return (enteredPounds * 703) / (enteredInches * enteredInches);
+ }
 
 
 //----------------------------------------------------------------------------

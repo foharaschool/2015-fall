@@ -23,14 +23,14 @@ The Test Plan
 
 
     Test Case 2:
-        Inputs:
+        Inputs: 3 strings
     
-        Expected Results:
+        Expected Results: middle is second string
 
     Test Case 3:
-        Inputs:
+        Inputs: 9 strings
     
-        Expected Results:
+        Expected Results: middle value is 5
 */
 
 
@@ -61,7 +61,8 @@ function project5Part4()  {
 	
 	var outputList;              // will contain a ref to the ordered list on the web page
 	var firstSubHeading;         // will contain a ref to the first sub heading 
-	var secondSubHeading;        // will contain a ref to the second sub heading 
+	var secondSubHeading;        // will contain a ref to the second sub heading
+	var oddMiddleString;            // will contain math to locate middle string  
 	
     
     //  Loop to obtain and place any number of strings from user into the string array
@@ -115,7 +116,11 @@ function project5Part4()  {
 	firstSubHeading.innerHTML += stringArray.length; 
 	
 	// Place the string from the middle element (aka "slot") of the array into the second sub heading on the web page
-	
+	if(stringArray.length % 2 === 1) {
+		secondSubHeading = document.getElementById("middle-string");
+		oddMiddleString = (stringArray.length + 1) / 2 - 1;
+		secondSubHeading.innerHTML = stringArray[oddMiddleString];
+	}
 	
 
 

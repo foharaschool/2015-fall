@@ -3,23 +3,51 @@
 /*  There are no global variables  */
 
 /*
+Table update Specifications:
+* Table must generate rows only for items that have stock within user specified range
+* Table in stock aggregate should reflect only information included in user defined results, total records
+  to continue to reflect all records in file
+
+User range specifications:
+* Program to ask user for lower and upper bounds of in stock range
+* Program to validate input, and not run if invalid input provided.
+* Program to notify user of invalid input
+
+Table heading specifications:
+* Table heading to pass in the user defined bounds
+
+Version Plan:
+Version 1:
+* Program accepts lower and upper bounds and builds table with selected range
+
+Version 2:
+* Program incorporates bounds into heading above table
+
+Version 3:
+* Program prompts user for bounds and validates input
+
 
 The Test Plan
 
     Test Case 1:
-        Inputs:
+        Inputs: 1, 20
     
-        Expected Results:
+        Expected Results: 8 records
 
     Test Case 2:
-        Inputs:
+        Inputs: -1 , 20
     
-        Expected Results:
+        Expected Results: Invalid lower bound
 
     Test Case 3:
-        Inputs:
+        Inputs: 4, twenty
     
-        Expected Results:
+        Expected Results: Invalid upper bound
+        
+    Test Case 4:
+        Inputs: cancel button selected, 20
+    
+        Expected Results: Invalid lower bound
 */
 
 
@@ -45,15 +73,14 @@ specifications of LU5 Project Part 3.
   Output being sent back to the calling function:  - none -  
 ------------------------------------------------------------------------*/
 
-function displayHeadingAboveTable()  {
-	
-	var outputHeadingTitle;    // will contain ref to heading above results table
-
-	outputHeadingTitle    = document.getElementById('headingAboveTable');
-	outputHeadingTitle.innerHTML = "Item Inventory Records with Stock Amounts 100 or More";
+function displayHeadingAboveTable(lowerB, upperB)  {
+    var lowerBoundHeading = document.getElementById('lower-bound');
+    var upperBoundHeading = document.getElementById('upper-bound');
+    
+	// Add bounds to heading
+	lowerBoundHeading.innerHTML = lowerB;
+    upperBoundHeading.innerHTML = upperB;
 }
-
-
 
 /*-----------------------------------------------------------------------
   The purpose of this function is to place the FIRST row into the results
@@ -118,7 +145,34 @@ function displayRecordTotals(thatOutputTable,numberSelectedRecords,numberRecords
 	thatOutputTable.innerHTML += "<tr><td>&nbsp;Total Number Records</td><td>" + numberRecordsInFile + "</td></tr>";
 };    // END OF FUNCTION
 
-
+// The purpose of this function is to prompt the user for input and validate the provided input
+function promptBoundInputs() {
+    var inputError = false;
+    var inputRange = [];
+    var askLowerBound = prompt("Provide the lower bound of desired stock amount range:");
+    var askUpperBound = prompt("Provide upper bound of desired stock amount range:");
+    var lowerBoundNumber = Number(askLowerBound); // Stores converted number so that null can be tested
+    var upperBoundNumber = Number(askUpperBound); // Store converted number so that null can be tested
+    console.log(askLowerBound + " and the upper: " + askUpperBound);
+    // Validate lower and upper bound inputs for positive, numeric, lower < upper criteria
+    if(isNaN(lowerBoundNumber) || askLowerBound === "" || askLowerBound === null || lowerBoundNumber < 0) {
+        alert('The lower bound must be a number that is 0 or greater.');
+        inputError = true;
+    }
+    
+    if(isNaN(upperBoundNumber) || askUpperBound === "" || askUpperBound === null || upperBoundNumber < lowerBoundNumber) {
+       alert('The upper bound must be a number that is positive and greater than the lower bound');
+       inputError = true; 
+    }
+    
+    // If There is error in the input, return nothing to halt program
+    if(inputError) {
+        
+        return inputRange;
+    } else {
+        return inputRange = [lowerBoundNumber, upperBoundNumber];
+    }
+}
 
 
 
@@ -142,10 +196,26 @@ function project5Part3()  {
 	
 	var itemRecords;           // will hold ref to the Item Inventory file
     var outputTable;           // will hold ref to the results table on Web page
+    
+    
+    var boundInputs;       // will hold array with validated lower and upper bounds  
+    var lowerBoundInput;   // will hold lower bound of stock range
+    var upperBoundInput;   // will hold upper bound of stock range
 
-	
+	// Gather and validate inputs
+    boundInputs = promptBoundInputs();
+    
+    // Stop mainline function if Inputs have errors
+    if(boundInputs.length === 0) {
+        return;
+    }
+    
+    // Assign lower and upper bounds
+    lowerBoundInput = boundInputs[0];
+    upperBoundInput = boundInputs[1];
+    
 	// Place heading line above the table to reflect what the table contains
-	displayHeadingAboveTable();
+	displayHeadingAboveTable(lowerBoundInput, upperBoundInput);
      
     // Generate a reference to the HTML output table so we can add rows to it
 	//    (Note that for this program, the html table element itself is already present
@@ -172,7 +242,7 @@ function project5Part3()  {
         currentStockAmount = itemRecords.getItemStockAmount();
         currentStockAmount = currentStockAmount.toFixed(1);        // user said there might be parital units onhand
 		
-		if (currentStockAmount >= 100)   {
+		if (currentStockAmount >= lowerBoundInput && currentStockAmount <= upperBoundInput)   {
 			
 			numberSelectedRecords++;
 			
